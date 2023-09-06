@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CryptoWiki</string>
+    <string name="app_description">your gateway to cryptocurrency knowledge</string>
+    <string name="crypto_test_description">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide. Introduced as a joke currency on 6 December 2013, Dogecoin quickly developed its own online community.</string>
+</resources>
