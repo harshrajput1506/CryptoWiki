@@ -1,5 +1,7 @@
 package `in`.hypernation.cryptowiki.ui.theme
 
+import android.content.res.Resources.Theme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -42,6 +44,12 @@ val Typography = Typography(
         fontFamily = fonts,
         fontWeight = FontWeight.Normal,
         fontSize = 18.sp
+    ),
+
+    displayMedium = TextStyle(
+        fontFamily = fonts,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
     )
 
     /* Other default text styles to override
