@@ -8,6 +8,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import `in`.hypernation.cryptowiki.data.repository.CryptoRepository
 import `in`.hypernation.cryptowiki.utils.Resource
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -18,6 +20,12 @@ class CoinListViewModel @Inject constructor(
 
     private val _state = mutableStateOf(CoinListState())
     val state: State<CoinListState> = _state
+
+    private val _isSearching = MutableStateFlow(false)
+    val isSearching = _isSearching.asStateFlow()
+
+    private val _searchText = MutableStateFlow("")
+    val searchText = _searchText.asStateFlow()
     init {
         getCoinList()
     }

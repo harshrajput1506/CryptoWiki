@@ -40,14 +40,14 @@ fun CryptoListItem(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 10.dp, horizontal = 30.dp)
-            .shadow(3.dp, RoundedCornerShape(30.dp))
+            .shadow(3.dp, RoundedCornerShape(25.dp))
             .clickable { onItemClick() }
     ){
         Row (
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier
                 .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.surface, RoundedCornerShape(30.dp))
+                .background(MaterialTheme.colorScheme.surface, RoundedCornerShape(25.dp))
                 .padding(vertical = 35.dp, horizontal = 25.dp)
 
         ) {

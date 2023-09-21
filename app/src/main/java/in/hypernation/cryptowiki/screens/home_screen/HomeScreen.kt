@@ -75,7 +75,7 @@ fun HomeScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(30.dp),
+                    .padding(start = 30.dp, top = 30.dp, end = 30.dp, bottom = 20.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
@@ -177,9 +177,13 @@ fun SearchCard(
 
     Row(
         modifier = Modifier
-            .shadow(1.dp, RoundedCornerShape(100.dp))
-            .background(MaterialTheme.colorScheme.surface, RoundedCornerShape(100.dp))
-            .padding(vertical = 12.dp, horizontal = 24.dp)
+            .shadow(
+                elevation = 2.dp,
+                shape = RoundedCornerShape(if(isSearchAnimate) 25.dp else 100.dp),
+                spotColor = Color.Black
+            )
+            .background(MaterialTheme.colorScheme.surface, RoundedCornerShape(if(isSearchAnimate) 25.dp else 100.dp))
+            .padding(vertical = if(isSearchAnimate) 2.dp else 10.dp, horizontal = 24.dp)
             .animateContentSize(
                 animationSpec = tween(100)
             ),
@@ -193,7 +197,7 @@ fun SearchCard(
                 .clickable {
                     onClick()
                 }
-                .size(if (isSearchAnimate) 32.dp else 24.dp),
+                .size(if (isSearchAnimate) 26.dp else 24.dp),
             colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.surfaceVariant)
         )
         Spacer(modifier = Modifier.width(6.dp))
