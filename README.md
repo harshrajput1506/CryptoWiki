@@ -35,7 +35,7 @@ To get started with CryptoWiki, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/harshrajput1506/cryptowiki.git
+   git clone https://github.com/harshrajput1506/CryptoWiki.git
 
 
 2. Open the project in Android Studio.
