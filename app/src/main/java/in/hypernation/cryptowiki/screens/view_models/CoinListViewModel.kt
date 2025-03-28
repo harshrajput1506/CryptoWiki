@@ -25,7 +25,7 @@ class CoinListViewModel @Inject constructor(
     val isSearching = _isSearching.asStateFlow()
 
     private val _searchText = MutableStateFlow("")
-    val searchText = _searchText.asStateFlow()
+    val searchText get() = _searchText.asStateFlow()
     init {
         getCoinList()
     }
